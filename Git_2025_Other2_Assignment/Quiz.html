@@ -1,10 +1,82 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-	    <meta charset="UTF-8">
-	    <title>Quiz</title>
-	</head>
-	<body>
-		<script src="Quiz.js"></script>
-	</body>
+  <head>
+      <meta charset="UTF-8">
+      <title>Quiz</title>
+    <style>
+   body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5faff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+ 
+    .quiz-container {
+      background-color: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 700px;
+    }
+ 
+    .question {
+      font-size: 30px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+ 
+    .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+ 
+    .choice-button {
+      padding: 15px 20px;
+      font-size: 18px;
+      text-align: left;
+      border: 2px solid #d0e7ff;
+      border-radius: 8px;
+      background-color: #eaf5ff;
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+ 
+    .choice-button:hover {
+      background-color: #d2ecff;
+      border-color: #99d0ff;
+    }
+ 
+    .result {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="quiz-container">
+    <div class="question">
+      システム開発の早い段階で、<br>目に見える形で利用者の要求が確認できるように確認用のソフトウェアを作成する。<br>
+      ソフトウェア開発モデルとして、最も適切なものはどれか。
+    </div>
+    <div class="choices">
+      <button class="choice-button" data-correct="false">アジャイル</button>
+      <button class="choice-button" data-correct="false">ウォーターフォールモデル</button>
+      <button class="choice-button" data-correct="false">スパイラル</button>
+      <button class="choice-button" data-correct="true">プロトタイピング</button>
+    </div>
+    <div class="result" id="result"></div>
+  </div>
+ 
+  <script src="script.js"></script>
+    <script src="Quiz.js"></script>
+  </body>
 </html>
